@@ -6,6 +6,7 @@
     RUN git clone https://github.com/shephertz/App42PaaS-Java-MySQL-Sample /tmp/App42PaaS-Java-MySQL-Sample
     RUN cd /tmp/App42PaaS-Java-MySQL-Sample && \
         mvn package
+    RUN cd /tmp/App42PaaS-Java-MySQL-Sample/WebContent sed -i 's/192.168.2.175/mysql/' Config.properties
     RUN cd /tmp/App42PaaS-Java-MySQL-Sample/target
     WORKDIR /tmp/app/
     RUN cp /tmp/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /tmp/app/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war
