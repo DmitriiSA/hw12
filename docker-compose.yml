@@ -11,7 +11,7 @@ services:
       volumes:
         - mysql-data:/var/lib/mysql
       ports:
-        - "8514:3306"
+        - "8514:33060"
 
     mvn:
         build:
@@ -31,12 +31,12 @@ services:
         depends_on:
             - mysql
             - mvn
-#        links:
-#          - mysql
-#        environment:
-#          SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/dd?useSSL=false&serverTimezone=UTC
-#          SPRING_DATASOURCE_USERNAME: acp4pogynvaeidfj
-#          SPRING_DATASOURCE_PASSWORD: jc31d2qyy7h9jv5jn1u9uosjksxzaizw
+        links:
+          - mysql
+        environment:
+          SPRING_DATASOURCE_URL: jdbc:mysql://mysql:33060/dd?useSSL=false&serverTimezone=UTC
+          SPRING_DATASOURCE_USERNAME: acp4pogynvaeidfj
+          SPRING_DATASOURCE_PASSWORD: jc31d2qyy7h9jv5jn1u9uosjksxzaizw
 
 volumes:
    mysql-data:
