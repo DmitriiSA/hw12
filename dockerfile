@@ -9,3 +9,4 @@ RUN cd /tmp/App42PaaS-Java-MySQL-Sample && \
 RUN cd /tmp/App42PaaS-Java-MySQL-Sample/target
 WORKDIR /tmp/app/
 RUN cp /tmp/App42PaaS-Java-MySQL-Sample/target/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war /tmp/app/App42PaaS-Java-MySQL-Sample-0.0.1-SNAPSHOT.war
+RUN cp /tmp/App42PaaS-Java-MySQL-Sample/WebContent/Config.properties /tmp/app/ROOT/Config.properties
