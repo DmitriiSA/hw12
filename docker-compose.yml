@@ -35,7 +35,7 @@ services:
         links:
           - mysql
         environment:
-          SPRING_DATASOURCE_URL: jdbc:mysql://mysql:8514/dd?useSSL=false&serverTimezone=UTC
+          SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/dd?useSSL=false&serverTimezone=UTC
           SPRING_DATASOURCE_USERNAME: acp4pogynvaeidfj
           SPRING_DATASOURCE_PASSWORD: jc31d2qyy7h9jv5jn1u9uosjksxzaizw
 
