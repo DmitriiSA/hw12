@@ -11,7 +11,7 @@
     #RUN sed -i 's/app42.paas.db.port = "8514"/app42.paas.db.port = 33060/' Config.properties
     #RUN sed -i 's/app42.paas.db.password = "jc31d2qyy7h9jv5jn1u9uosjksxzaizw"/app42.paas.db.password = jc31d2qyy7h9jv5jn1u9uosjksxzaizw/' Config.properties
     #RUN sed -i 's/app42.paas.db.name = "dd"/app42.paas.db.name = dd/' Config.properties
-    #RUN cd /tmp/App42PaaS-Java-MySQL-Sample && \
+    RUN cd /tmp/App42PaaS-Java-MySQL-Sample && \
         mvn package
     RUN cd /tmp/App42PaaS-Java-MySQL-Sample/target
     WORKDIR /tmp/app/
